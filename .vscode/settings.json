@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^mv \"05_Tasks\" \"03_Project_Execution/Task_Management\" && mv \"06_Risk_Logs\" \"04_Monitoring_and_Controlling/Risk_Management\" && mv \"07_Reports\" \"04_Monitoring_and_Controlling/Status_Reports\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
