@@ -5,28 +5,27 @@ This document tracks all project tasks, their current status, assignments, and p
 
 ---
 
-## Task List
+## Product Backlog Items
 
-### High Priority Tasks
+*[This is your prioritized list of work items. In agile/scrum, these are typically user stories with story points. Add your user stories as you identify them.]*
 
-| Task ID | Task Name | Assigned To | Status | Due Date | Dependencies |
-|---------|-----------|-------------|--------|----------|--------------|
-| T-001 | Define project scope | Project Manager | Not Started | TBD | None |
-| T-002 | Create project charter | Project Manager | Not Started | TBD | T-001 |
-| T-003 | Identify stakeholders | Project Manager | Not Started | TBD | T-001 |
+### High Priority
 
-### Medium Priority Tasks
+| ID | User Story / Task | Story Points | Assigned To | Status | Sprint | Dependencies |
+|----|-------------------|--------------|-------------|--------|--------|--------------|  
+| US-001 | As a [role], I want [feature] so that [benefit] | # | | Not Started | | None |
 
-| Task ID | Task Name | Assigned To | Status | Due Date | Dependencies |
-|---------|-----------|-------------|--------|----------|--------------|
-| T-004 | Set up development environment | Dev Team | Not Started | TBD | T-002 |
-| T-005 | Design system architecture | Tech Lead | Not Started | TBD | T-002 |
+### Medium Priority
 
-### Low Priority Tasks
+| ID | User Story / Task | Story Points | Assigned To | Status | Sprint | Dependencies |
+|----|-------------------|--------------|-------------|--------|--------|--------------|  
+| US-### | | | | Not Started | | |
 
-| Task ID | Task Name | Assigned To | Status | Due Date | Dependencies |
-|---------|-----------|-------------|--------|----------|--------------|
-| T-006 | Create user documentation | Documentation Lead | Not Started | TBD | T-005 |
+### Low Priority
+
+| ID | User Story / Task | Story Points | Assigned To | Status | Sprint | Dependencies |
+|----|-------------------|--------------|-------------|--------|--------|--------------|  
+| US-### | | | | Not Started | | |
 
 ---
 

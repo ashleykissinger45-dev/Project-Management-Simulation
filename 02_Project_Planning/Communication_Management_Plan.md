@@ -20,11 +20,11 @@ This Communication Management Plan establishes the framework for project communi
 
 ## Communication Objectives
 
-1. Ensure timely and appropriate generation, collection, distribution, and storage of project information
-2. Provide clear and consistent communication among all stakeholders
-3. Establish communication channels and protocols
-4. Document decisions and action items
-5. Maintain transparency in project status and progress
+*[Define what you want to achieve with project communications]*
+
+1. 
+2. 
+3. 
 
 ---
 

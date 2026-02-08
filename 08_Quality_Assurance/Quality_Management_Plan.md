@@ -18,17 +18,17 @@ This Quality Management Plan defines how the project team will implement quality
 
 ---
 
-## Quality Policy
+##Quality Policy
 
-**Our Commitment**: Deliver a professional, functional, and educational Project Management Simulation that demonstrates industry best practices in both web development and project management.
+*[Define your quality commitment and objectives]*
+
+**Our Commitment**: *[What is your quality promise?]*
 
 **Quality Objectives**:
-1. Meet all defined requirements and acceptance criteria
-2. Follow industry-standard coding practices
-3. Maintain professional documentation standards
-4. Ensure cross-browser compatibility and responsiveness
-5. Provide clear, usable, and accessible interfaces
-6. Demonstrate PMI/PMBOK project management standards
+*[List your specific quality goals]*
+1. 
+2. 
+3. 
 
 ---
 

@@ -21,181 +21,47 @@ This document captures all project requirements including business, functional, 
 
 ## Business Requirements
 
-### BR-001: Educational Value
-**Priority**: High  
-**Description**: The system must provide practical learning experience combining web development and project management skills.
+*[Business requirements define WHAT the business needs from this project and WHY. They should be high-level and business-focused, not technical.]*
+
+### BR-001: [Requirement Name]
+**Priority**: *[High / Medium / Low]*  
+**Description**: *[Describe the business need]*
 
 **Acceptance Criteria**:
-- Demonstrates HTML, CSS, JavaScript proficiency
-- Includes complete PM documentation following PMI standards
-- Provides hands-on experience with real-world workflows
-
----
-
-### BR-002: Portfolio Readiness
-**Priority**: High  
-**Description**: The project must be suitable for professional portfolio presentation.
-
-**Acceptance Criteria**:
-- Professional GitHub repository with comprehensive README
-- Clean, well-documented code
-- Industry-standard practices demonstrated
-
----
-
-### BR-003: Realistic Simulation
-**Priority**: Medium  
-**Description**: The system should simulate actual project team dynamics and workflows.
-
-**Acceptance Criteria**:
-- Multiple team personas with distinct roles
-- Realistic communication patterns
-- Standard PM artifacts and processes
+*[How will we know this requirement is met?]*
+- 
+- 
 
 ---
 
 ## Functional Requirements
 
-### Dashboard Features
+*[Functional requirements describe HOW the system should behave. They detail specific features and functionality.]*
 
-#### FR-001: Project Overview Display
-**Priority**: High  
-**Description**: Dashboard must display key project metrics at a glance.
-
-**Acceptance Criteria**:
-- Total tasks count
-- Completed tasks count
-- Active risks count
-- Team member count
-- Progress percentage visualization
-
-**Dependencies**: None
-
----
-
-#### FR-002: Task Management
-**Priority**: High  
-**Description**: Users must be able to view and manage project tasks.
+### FR-001: [Feature Name]
+**Priority**: *[High / Medium / Low]*  
+**Description**: *[Describe what the system must do]*
 
 **Acceptance Criteria**:
-- Display task list with status, priority, assignee, due date
-- Filter tasks by status (all, not started, in progress, complete)
-- Visual indicators for priority levels
-- Ability to add new tasks (future enhancement)
+*[Specific, testable criteria]*
+- 
+- 
 
-**Dependencies**: FR-001
-
----
-
-#### FR-003: Team Member Display
-**Priority**: High  
-**Description**: Display team member information and roles.
-
-**Acceptance Criteria**:
-- Show team member cards with name, role, avatar
-- Clean, organized grid layout
-- Responsive design for mobile devices
-
-**Dependencies**: None
-
----
-
-#### FR-004: Risk Monitoring
-**Priority**: High  
-**Description**: Display and track project risks.
-
-**Acceptance Criteria**:
-- List active risks with description
-- Show probability and impact levels
-- Display risk status
-- Ability to add new risks (future enhancement)
-
-**Dependencies**: None
-
----
-
-#### FR-005: Responsive Navigation
-**Priority**: Medium  
-**Description**: Provide easy navigation between dashboard sections.
-
-**Acceptance Criteria**:
-- Navigation menu with all major sections
-- Smooth scrolling to sections
-- Active state indication
-- Mobile-friendly menu
-
-**Dependencies**: None
-
----
-
-### Documentation Requirements
-
-#### FR-006: Complete PM Documentation Suite
-**Priority**: High  
-**Description**: Provide all standard PMI/PMBOK project management documents.
-
-**Acceptance Criteria**:
-- Project Charter
-- Business Case
-- Stakeholder Register
-- Risk Register
-- Communication Plan
-- Quality Management Plan
-- All 10 PMI knowledge areas represented
-
-**Dependencies**: None
-
----
-
-#### FR-007: Communication Logging
-**Priority**: Medium  
-**Description**: Log all team meetings and communications.
-
-**Acceptance Criteria**:
-- Date-stamped communication logs
-- Meeting participants documented
-- Decisions and action items captured
-- Searchable archive
-
-**Dependencies**: None
+**Dependencies**: *[Other requirements this depends on, if any]*
 
 ---
 
 ## Technical Requirements
 
-### TR-001: Frontend Technology
-**Priority**: High  
-**Description**: Dashboard must be built with standard web technologies.
+*[Technical requirements specify HOW the system will be built from a technology perspective.]*
+
+### TR-001: [Technical Requirement Name]
+**Priority**: *[High / Medium / Low]*  
+**Description**: *[Describe the technical specification]*
 
 **Acceptance Criteria**:
-- HTML5 for structure
-- CSS3 for styling (Flexbox/Grid)
-- JavaScript ES6+ for functionality
-- No framework dependencies (vanilla JS)
-
----
-
-### TR-002: Browser Compatibility
-**Priority**: High  
-**Description**: Dashboard must work across modern browsers.
-
-**Acceptance Criteria**:
-- Chrome (latest 2 versions)
-- Firefox (latest 2 versions)
-- Safari (latest 2 versions)
-- Edge (latest 2 versions)
-
----
-
-### TR-003: Responsive Design
-**Priority**: High  
-**Description**: Interface must adapt to different screen sizes.
-
-**Acceptance Criteria**:
-- Mobile: 320px - 767px
-- Tablet: 768px - 1024px
-- Desktop: 1025px and above
-- No horizontal scrolling on any device
+- 
+- 
 
 ---
 
@@ -237,91 +103,58 @@ This document captures all project requirements including business, functional, 
 
 ---
 
-### NFR-002: Accessibility
-**Priority**: Medium  
-**Description**: Dashboard should be accessible to users with disabilities.
-
-**Acceptance Criteria**:
-- Semantic HTML elements
-- Sufficient color contrast (WCAG AA)
-- Keyboard navigation support
-- ARIA labels where appropriate
-
----
-
-### NFR-003: Maintainability
-**Priority**: High  
-**Description**: Code must be clean and maintainable.
-
-**Acceptance Criteria**:
-- Well-commented code
-- Consistent naming conventions
-- Modular function design
-- Documentation for complex logic
-
----
-
-### NFR-004: Scalability
-**Priority**: Low  
-**Description**: Architecture should allow future enhancements.
-
-**Acceptance Criteria**:
-- Modular code structure
-- Separation of concerns
-- Easy to add new features
-- Flexible data management
-
----
-
 ## User Stories
 
-### Epic 1: Dashboard Viewing
+*[User stories follow the format: "As a [role], I want [feature] so that [benefit]". Group them into epics for better organization.]*
 
-**US-001**: As a project manager, I want to see key project metrics at a glance, so I can quickly assess project health.  
-**Priority**: High  
-**Story Points**: 3
+### Epic 1: [Epic Name]
 
-**US-002**: As a team member, I want to view my assigned tasks, so I know what work I need to complete.  
-**Priority**: High  
-**Story Points**: 5
+**US-###**: As a [role], I want [feature], so that [benefit].  
+**Priority**: *[High / Medium / Low]*  
+**Story Points**: *[Estimate]*
 
-**US-003**: As a stakeholder, I want to see project progress, so I can understand how the project is advancing.  
-**Priority**: Medium  
-**Story Points**: 3
+**Acceptance Criteria**:
+- [ ] 
+- [ ] 
 
 ---
 
-### Epic 2: Task Management
+## Requirements Traceability Matrix
 
-**US-004**: As a project manager, I want to filter tasks by status, so I can focus on specific task categories.  
-**Priority**: Medium  
-**Story Points**: 2
+*[Map requirements to test cases and deliverables]*
 
-**US-005**: As a team member, I want to see task priorities, so I can work on the most important items first.  
-**Priority**: Medium  
-**Story Points**: 1
+| Req ID | Type | Priority | Status | Test Case | Owner |
+|--------|------|----------|--------|-----------|-------|
+| | | | | | |
 
 ---
 
-### Epic 3: Team Coordination
+## Assumptions
 
-**US-006**: As a team member, I want to see who else is on the team, so I know who to collaborate with.  
-**Priority**: High  
-**Story Points**: 2
+*[List assumptions being made]*
 
-**US-007**: As a project manager, I want to understand team member roles, so I can assign appropriate tasks.  
-**Priority**: Medium  
-**Story Points**: 1
+1. 
+2. 
 
 ---
 
-### Epic 4: Risk Management
+## Constraints
 
-**US-008**: As a project manager, I want to monitor active risks, so I can proactively manage issues.  
-**Priority**: High  
-**Story Points**: 3
+*[List project constraints]*
 
-**US-009**: As a team member, I want to identify potential risks, so we can avoid problems.  
+1. **Time**: 
+2. **Budget**: 
+3. **Technology**: 
+4. **Scope**: 
+
+---
+
+## Out of Scope
+
+*[Explicitly state what is NOT included]*
+
+- ❌ 
+- ❌  
 **Priority**: Medium  
 **Story Points**: 2
 
