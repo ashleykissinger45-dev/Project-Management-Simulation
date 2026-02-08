@@ -126,13 +126,28 @@ Active Directory SSO, RBAC, project visibility rules
 
 This journal is organized into separate logs for easy navigation:
 
-- **[01_Communication_Log.md](01_Communication_Log.md)** - All emails, messages, meetings
-- **[02_Decisions_Log.md](02_Decisions_Log.md)** - Every decision with rationale and outcomes
-- **[03_Risks_and_Issues.md](03_Risks_and_Issues.md)** - Risk tracking and issue management
-- **[04_Sprint_Metrics.md](04_Sprint_Metrics.md)** - Velocity, burndown, team health
-- **[05_Lessons_Learned.md](05_Lessons_Learned.md)** - Retrospective insights and reflections
-- **[06_Stakeholder_Tracker.md](06_Stakeholder_Tracker.md)** - Stakeholder confidence and interactions
-- **[Sprint_Logs/](Sprint_Logs/)** - Detailed logs for each sprint
+### Communication & Collaboration
+- **[01_Emails.md](01_Emails.md)** - All emails received and sent
+- **[02_Messages.md](02_Messages.md)** - Slack/Teams instant messages
+- **[03_Meeting_Notes.md](03_Meeting_Notes.md)** - All meeting notes and standups
+
+### Decision & Risk Management
+- **[04_Decisions_Log.md](04_Decisions_Log.md)** - Every decision with rationale and outcomes
+- **[05_Risks_Log.md](05_Risks_Log.md)** - Risk register and mitigation tracking
+- **[06_Issues_Log.md](06_Issues_Log.md)** - Issues encountered and resolutions
+
+### Performance & Metrics
+- **[07_Sprint_Metrics.md](07_Sprint_Metrics.md)** - Velocity, burndown, team health
+
+### Learning & Reflection
+- **[08_Retrospectives.md](08_Retrospectives.md)** - Sprint retrospective insights
+- **[09_Personal_Notes.md](09_Personal_Notes.md)** - Your personal reflections and observations
+
+### Relationships
+- **[10_Stakeholder_Tracker.md](10_Stakeholder_Tracker.md)** - Stakeholder confidence and interactions
+
+### Sprint Details
+- **[Sprint_Logs/](Sprint_Logs/)** - Detailed daily logs for each sprint
 
 ---
 
