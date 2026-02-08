@@ -4,8 +4,8 @@
 
 | Item | Details |
 |------|---------|
-| **Project Name** | Project Management Simulation |
-| **Document Owner** | Alex Chen, Business Analyst |
+| **Project Name** | Smart Task & Risk Dashboard |
+| **Document Owner** | Ashley Kissinger, Project Manager |
 | **Created Date** | February 7, 2026 |
 | **Last Updated** | February 7, 2026 |
 | **Version** | 1.0 |
@@ -24,24 +24,46 @@ This register identifies all project stakeholders, their interests, influence le
 
 ### Internal Stakeholders
 
-*[List internal stakeholders involved in or affected by the project]*
+*[Key project team members and internal decision-makers]*
 
 | ID | Name | Role | Organization/Department | Contact |
 |----|------|------|------------------------|---------|
-| SH-001 | | | | |
-| SH-002 | | | | |
+| SH-001 | Sarah Chen | VP Delivery Operations / Sponsor | Executive Leadership | sarah.chen@techflowsolutions.com |
+| SH-002 | Ashley Kissinger | Project Manager | PMO | ashley.kissinger@techflowsolutions.com |
+| SH-003 | Michael Rodriguez | PMO Director | PMO | michael.rodriguez@techflowsolutions.com |
+| SH-004 | David Park | Chief Technology Officer | Engineering | david.park@techflowsolutions.com |
+| SH-005 | Jordan Martinez | Senior Full Stack Developer | Engineering | jordan.martinez@techflowsolutions.com |
+| SH-006 | Jamie Park | Backend Developer | Engineering | jamie.park@techflowsolutions.com |
+| SH-007 | Sam Kim | UI/UX Designer | Design | sam.kim@techflowsolutions.com |
+| SH-008 | Riley Thompson | QA Engineer | Quality Assurance | riley.thompson@techflowsolutions.com |
+| SH-009 | Maya Patel | IT Security Manager | IT Security | maya.patel@techflowsolutions.com |
+| SH-010 | Lisa Wong | Director of Client Services | Client Services | lisa.wong@techflowsolutions.com |
+| SH-011 | PM User Group (12 PMs) | Primary End Users | Delivery | pm-group@techflowsolutions.com |
+| SH-012 | Executive Team (5 execs) | Dashboard Consumers | C-Suite | exec-team@techflowsolutions.com |
 
 ### External Stakeholders
 
-*[List external stakeholders who have an interest in the project]*
+*[External parties with interest or impact on the project]*
 
 | ID | Name | Role | Organization/Department | Contact |
-|----|------|------|------------------------|---------|
-| SH-001 | | | | |
-| SH-002 | | | | |
+|-Maps stakeholder influence and interest to determine engagement strategy]*
 
----
-
+| Stakeholder | Power | Interest | Quadrant | Strategy |
+|-------------|-------|----------|----------|----------|
+| Sarah Chen (Sponsor) | High | High | Manage Closely | Weekly check-ins, decision authority, budget owner |
+| Michael Rodriguez (PMO Dir) | High | High | Manage Closely | PMO standards alignment, resource approval |
+| Ashley Kissinger (PM) | High | High | Manage Closely | Project lead, daily execution |
+| David Park (CTO) | High | Medium | Keep Satisfied | Technical architecture approval, infrastructure |
+| Jordan Martinez (Dev Lead) | Medium | High | Keep Informed | Daily collaboration, technical decisions |
+| Jamie Park (Developer) | Medium | High | Keep Informed | Development execution, code quality |
+| Sam Kim (Designer) | Medium | High | Keep Informed | UX design, user testing |
+| Riley Thompson (QA) | Medium | High | Keep Informed | Testing strategy, quality gates |
+| Maya Patel (IT Security) | High | Low | Keep Satisfied | Security review, API access approval |
+| Lisa Wong (Client Services) | Medium | Medium | Keep Informed | Client perspective, NPS linkage |
+| PM User Group (12) | Low | High | Keep Informed | UAT participation, adoption critical |
+| Executive Team (5) | Medium | Medium | Keep Informed | Portfolio visibility, weekly summaries |
+| Dr. Amanda Foster | Medium | Low | Monitor | External business case, demo opportunity |
+| Atlassian Support | Low | Low | Monitor | API stability, support tickets as needed
 ## Stakeholder Analysis
 
 ### Power/Interest Grid
