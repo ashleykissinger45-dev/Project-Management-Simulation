@@ -207,18 +207,22 @@ As PM, you're accountable for:
 - ✅ Velocity tracking and burndown charts
 - ✅ Budget monitoring and resource allocation
 
-### Technical Skills You'll Apply
-- ✅ Full-stack web development (React + Python/Java)
-- ✅ RESTful API design and implementation
-- ✅ Database design (PostgreSQL)
-- ✅ API integration (Jira REST API)
-- ✅ Automation scripting (Python)
-- ✅ Git version control and CI/CD
-- ✅ Security implementation (SSO, RBAC)
-- ✅ Performance testing and optimiz              # Quality standards
-│   └── Quality_Management_Plan.md
-│
-├── 09Who This Is For
+### Technical Skills You'll Develop
+*This simulation emphasizes PM-level technical understanding, not advanced coding*
+
+- ✅ **Reading technical documentation** (API specs, architecture diagrams)
+- ✅ **Understanding tech stacks** (frontend/backend/database distinctions)
+- ✅ **Basic Git operations** (commit, push, pull - track project documents)
+- ✅ **Reviewing mockups & wireframes** (UI/UX evaluation)
+- ✅ **Facilitating technical discussions** (backend developer vs. designer needs)
+- ✅ **Writing technical requirements** (translating business needs to user stories)
+- ✅ **Basic HTML/CSS** (understanding what your team is building)
+- ✅ **API integration concepts** (how Jira sync works, not building it yourself)
+- ✅ **Risk assessment of technical dependencies** (Jira API changes, security vulnerabilities)
+
+**Reality Check**: You're the *Project Manager*, not the developer. Your team (Jordan, Jamie, Sam, Riley) builds the dashboard. You coordinate, prioritize, remove blockers, and make decisions. Any coding you do is minimal—updating documentation, basic HTML prototypes, or simple scripts. Focus on *managing* the technical work, not doing all of it yourself.
+
+## 👤 Who This Is For
 
 - **Aspiring Project Managers**: Get hands-on experience managing a real project without instructions
 - **Agile Practitioners**: Practice Scrum ceremonies and agile principles
