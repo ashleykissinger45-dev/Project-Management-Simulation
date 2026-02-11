@@ -7,27 +7,67 @@ const projectData = {
     tasks: [
         {
             id: 1,
-            name: "Define project scope",
-            assignee: "Project Manager",
-            status: "in-progress",
+            name: "Create Project Charter",
+            assignee: "Ashley Kissinger",
+            status: "not-started",
             priority: "high",
             dueDate: "2026-02-15"
         },
         {
             id: 2,
-            name: "Create project charter",
-            assignee: "Project Manager",
+            name: "Develop Business Case",
+            assignee: "Ashley Kissinger",
             status: "not-started",
             priority: "high",
-            dueDate: "2026-02-20"
+            dueDate: "2026-02-12"
         },
         {
             id: 3,
-            name: "Set up development environment",
-            assignee: "Dev Team",
-            status: "complete",
-            priority: "medium",
+            name: "Complete Stakeholder Register",
+            assignee: "Ashley Kissinger",
+            status: "not-started",
+            priority: "high",
+            dueDate: "2026-02-12"
+        },
+        {
+            id: 4,
+            name: "Sprint 1 Planning Meeting",
+            assignee: "Whole Team",
+            status: "not-started",
+            priority: "high",
             dueDate: "2026-02-10"
+        },
+        {
+            id: 5,
+            name: "Request Jira API Access from IT Security",
+            assignee: "Ashley Kissinger",
+            status: "not-started",
+            priority: "high",
+            dueDate: "2026-02-12"
+        },
+        {
+            id: 6,
+            name: "Define Technical Architecture",
+            assignee: "Jordan Martinez",
+            status: "not-started",
+            priority: "high",
+            dueDate: "2026-02-14"
+        },
+        {
+            id: 7,
+            name: "Create UI/UX Wireframes",
+            assignee: "Sam Kim",
+            status: "not-started",
+            priority: "medium",
+            dueDate: "2026-02-16"
+        },
+        {
+            id: 8,
+            name: "Set up Development Environment",
+            assignee: "Jamie Park",
+            status: "not-started",
+            priority: "medium",
+            dueDate: "2026-02-13"
         }
     ],
     team: [
@@ -35,41 +75,70 @@ const projectData = {
             id: 1,
             name: "Ashley Kissinger",
             role: "Project Manager",
-            initials: "AK"
+            initials: "AK",
+            email: "ashley.kissinger@techflowsolutions.com"
         },
         {
             id: 2,
-            name: "Tech Lead",
-            role: "Technical Lead",
-            initials: "TL"
+            name: "Jordan Martinez",
+            role: "Senior Full Stack Developer",
+            initials: "JM",
+            email: "jordan.martinez@techflowsolutions.com"
         },
         {
             id: 3,
-            name: "Developer 1",
-            role: "Frontend Developer",
-            initials: "D1"
+            name: "Jamie Park",
+            role: "Backend Developer",
+            initials: "JP",
+            email: "jamie.park@techflowsolutions.com"
         },
         {
             id: 4,
-            name: "Developer 2",
-            role: "Backend Developer",
-            initials: "D2"
+            name: "Sam Kim",
+            role: "UI/UX Designer",
+            initials: "SK",
+            email: "sam.kim@techflowsolutions.com"
+        },
+        {
+            id: 5,
+            name: "Riley Thompson",
+            role: "QA Engineer",
+            initials: "RT",
+            email: "riley.thompson@techflowsolutions.com"
         }
     ],
     risks: [
         {
             id: 1,
-            description: "Resource availability constraints",
+            description: "Jira API access delay from IT Security (due Feb 12)",
             probability: "medium",
             impact: "high",
-            status: "active"
+            status: "active",
+            owner: "Ashley Kissinger"
         },
         {
             id: 2,
-            description: "Scope creep",
+            description: "Resource availability constraints (50% allocation)",
+            probability: "medium",
+            impact: "high",
+            status: "active",
+            owner: "Ashley Kissinger"
+        },
+        {
+            id: 3,
+            description: "Scope creep from stakeholders",
             probability: "high",
             impact: "medium",
-            status: "active"
+            status: "active",
+            owner: "Ashley Kissinger"
+        },
+        {
+            id: 4,
+            description: "Technical dependencies delays",
+            probability: "medium",
+            impact: "medium",
+            status: "active",
+            owner: "Jordan Martinez"
         }
     ]
 };
@@ -191,6 +260,7 @@ function loadTeam() {
             <div class="team-avatar">${member.initials}</div>
             <div class="team-name">${member.name}</div>
             <div class="team-role">${member.role}</div>
+            <div class="team-email" style="font-size: 0.85rem; color: var(--text-light); margin-top: 0.5rem;">${member.email}</div>
         </div>
     `).join('');
 }
@@ -214,7 +284,8 @@ function loadRisks() {
             <h3>${risk.description}</h3>
             <p><strong>Probability:</strong> ${formatPriority(risk.probability)}</p>
             <p><strong>Impact:</strong> ${formatPriority(risk.impact)}</p>
-            <p><strong>Status:</strong> ${risk.status}</p>
+            <p><strong>Owner:</strong> ${risk.owner}</p>
+            <p><strong>Status:</strong> <span class="status-badge status-${risk.status}">${risk.status}</span></p>
         </div>
     `).join('');
 }

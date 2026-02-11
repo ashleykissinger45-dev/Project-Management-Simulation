@@ -159,6 +159,7 @@ SprintLab/
 │   └── 📝 Quality_Management_Plan.md                      # PM deliverable
 │
 ├── 09_WebApp/                                             # Dashboard application
+│   ├── 00_LAUNCH_DASHBOARD.md                             # 🚀 Quick access link
 │   ├── index.html                                         # Frontend
 │   ├── script.js                                          # Frontend logic
 │   └── style.css                                          # Styling

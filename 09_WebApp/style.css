@@ -86,6 +86,20 @@ body {
     font-size: var(--font-size-xl);
     font-weight: 700;
     color: var(--primary-color);
+    margin: 0;
+}
+
+.logo-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.logo-subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    font-weight: 400;
+    margin: 0;
 }
 
 .nav {
@@ -142,6 +156,26 @@ body {
     color: var(--secondary-color);
     border-bottom: 3px solid var(--primary-color);
     padding-bottom: var(--spacing-sm);
+}
+
+.project-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.project-header .section-title {
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-info {
+    font-size: var(--font-size-base);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xs);
+}
+
+.project-status {
+    font-size: var(--font-size-base);
+    color: var(--text-dark);
+    font-weight: 500;
 }
 
 /* ===========================
@@ -344,6 +378,13 @@ body {
 .team-role {
     color: var(--text-light);
     font-size: var(--font-size-sm);
+}
+
+.team-email {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    word-break: break-all;
+    margin-top: var(--spacing-xs);
 }
 
 /* ===========================
