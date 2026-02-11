@@ -213,7 +213,8 @@ By signing below, team members agree to follow this Definition of Done:
 | Team Member | Role | Signature | Date |
 |-------------|------|-----------|------|
 | Ashley Kissinger | Project Manager | __________ | ________ |
-| Alex Chen | Business Analyst | __________ | ________ |
+| Jordan Martinez | Dev Lead | __________ | ________ |
+| Jamie Park | Backend Developer | __________ | ________ |
 | Jordan Martinez | Developer | __________ | ________ |
 | Sam Kim | UI/UX Designer | __________ | ________ |
 | Riley Thompson | QA/Tester | __________ | ________ |

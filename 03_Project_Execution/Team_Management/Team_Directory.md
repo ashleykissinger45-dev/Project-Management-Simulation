@@ -9,11 +9,11 @@ This document outlines the project team structure, individual roles, responsibil
 
 | Name | Role | Responsibilities | Contact |
 |------|------|------------------|---------|
-| Ashley Kissinger | Project Manager | Overall project oversight, stakeholder management, resource coordination | ashley.kissinger@pm-sim.com |
-| Alex Chen | Business Analyst | Requirements gathering, documentation, user stories | alex.chen@pm-sim.com |
-| Jordan Martinez | Full Stack Developer | WebApp development, feature implementation, bug fixes | jordan.martinez@pm-sim.com |
-| Sam Kim | UI/UX Designer | Interface design, prototypes, usability | sam.kim@pm-sim.com |
-| Riley Thompson | QA/Tester | Quality assurance, testing, verification | riley.thompson@pm-sim.com |
+| Ashley Kissinger | Project Manager | Overall project oversight, stakeholder management, resource coordination | ashley.kissinger@techflowsolutions.com |
+| Jordan Martinez | Senior Full Stack Developer | Frontend/backend development, technical leadership, code reviews | jordan.martinez@techflowsolutions.com |
+| Jamie Park | Backend Developer | Backend API development, Jira integration, database design | jamie.park@techflowsolutions.com |
+| Sam Kim | UI/UX Designer | Interface design, prototypes, usability | sam.kim@techflowsolutions.com |
+| Riley Thompson | QA/Tester | Quality assurance, testing, verification | riley.thompson@techflowsolutions.com |
 
 ---
 
@@ -34,25 +34,26 @@ This document outlines the project team structure, individual roles, responsibil
 
 ---
 
-### Alex Chen - Business Analyst (BA)
-**Role:** Business Analyst  
-**Personality:** Analytical, detail-oriented, asks clarifying questions  
+### Jamie Park - Backend Developer
+**Role:** Backend Developer  
+**Personality:** Detail-oriented, security-conscious, methodical  
 **Key Responsibilities:**
-- Gather and document requirements from stakeholders
-- Create and maintain project scenario documentation
-- Translate business needs into technical specifications
-- Write user stories and acceptance criteria
-- Maintain product backlog
-- Facilitate requirements workshops
+- Develop backend REST API and business logic
+- Design and implement database schema (PostgreSQL)
+- Build Jira API integration for task synchronization
+- Implement risk scoring algorithms
+- Write automated background jobs for notifications
+- Ensure security best practices and SOC 2 compliance
 
-**Communication Style:** "Let me clarify the requirements..." / "Based on stakeholder feedback..."
+**Communication Style:** "We need to consider the security implications..." / "The data model should..."
 
 **Skills & Expertise:**
-- Requirements analysis
-- User story mapping
-- Process documentation
-- Stakeholder interviews
-- Business process modeling
+- Python Flask / Java Spring Boot
+- RESTful API design
+- PostgreSQL database design
+- API integration (Jira REST API)
+- Security and authentication
+- Background job scheduling
 
 ---
 
@@ -133,20 +134,21 @@ This document outlines the project team structure, individual roles, responsibil
 - **C** = Consulted (Provides input)
 - **I** = Informed (Kept updated)
 
-| Activity | PM | BA | Developer | Designer | QA |
+| Activity | PM | Dev Lead | Backend Dev | Designer | QA |
 |----------|----|----|-----------|----------|-----|
 | **Project Planning** | A | C | C | C | C |
-| **Requirements Gathering** | C | A/R | I | C | I |
-| **User Story Creation** | C | A/R | C | C | I |
+| **Requirements Gathering** | A/R | C | C | C | I |
+| **User Story Creation** | A/R | C | C | C | I |
 | **UI/UX Design** | C | C | I | A/R | I |
-| **Frontend Development** | C | I | A/R | C | I |
-| **Feature Implementation** | C | C | A/R | C | I |
-| **Code Review** | I | I | A/R | I | C |
+| **Frontend Development** | C | A/R | I | C | I |
+| **Backend Development** | C | C | A/R | I | I |
+| **API Integration** | C | C | A/R | I | I |
+| **Code Review** | I | A/R | R | I | C |
 | **Testing & QA** | C | C | C | C | A/R |
-| **Bug Fixing** | I | I | A/R | I | C |
-| **Documentation** | C | A/R | R | R | R |
-| **Deployment** | A | I | R | I | C |
-| **Stakeholder Updates** | A/R | C | I | I | I |
+| **Bug Fixing** | I | A/R | R | I | C |
+| **Documentation** | R | R | R | R | R |
+| **Deployment** | A | R | R | I | C |
+| **Stakeholder Updates** | A/R | I | I | I | I |
 | **Risk Management** | A/R | C | C | C | C |
 
 ---
@@ -169,8 +171,8 @@ This document outlines the project team structure, individual roles, responsibil
 | Team Member | Availability | Time Zone |
 |-------------|--------------|-----------|
 | Ashley Kissinger | Mon-Fri 8:00 AM - 5:00 PM | EST |
-| Alex Chen | Mon-Fri 9:00 AM - 6:00 PM | EST |
 | Jordan Martinez | Mon-Fri 9:00 AM - 6:00 PM | PST |
+| Jamie Park | Mon-Fri 9:00 AM - 6:00 PM | EST |
 | Sam Kim | Mon-Fri 10:00 AM - 6:00 PM | CST |
 | Riley Thompson | Mon-Fri 8:00 AM - 5:00 PM | EST |
 

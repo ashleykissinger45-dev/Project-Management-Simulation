@@ -56,7 +56,7 @@ Setting up a simulated project team with distinct personas for an educational PM
 
 **What Went Well**:
 - Creating detailed persona profiles with unique communication styles adds realism
-- Having a Business Analyst, Developer, Designer, and QA Tester covers all essential roles
+- Having a Senior Developer, Backend Developer, Designer, and QA Engineer covers all essential roles
 - Documenting team profiles upfront provides clear role expectations
 
 **What Could Be Improved**:
@@ -234,7 +234,7 @@ Organizing project documentation following PMI/PMBOK standards with professional
 | Knowledge Area | Documentation Location | Contact |
 |----------------|----------------------|---------|
 | Project Management Process | All _Monitoring_and_Controlling documents | Ashley Kissinger |
-| Requirements Management | Requirements_Documentation.md | Alex Chen |
+| Requirements Management | Requirements_Documentation.md | Ashley Kissinger |
 | Technical Implementation | WebApp folder + code comments | Jordan Martinez |
 | UX/Design Principles | Design files + style.css | Sam Kim |
 | Quality Assurance | Quality_Assurance folder | Riley Thompson |

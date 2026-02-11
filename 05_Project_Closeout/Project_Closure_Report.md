@@ -272,7 +272,8 @@ Potential future improvements documented:
 ### Team Contributions
 
 **Ashley Kissinger** - Project Manager: [Contributions summary]  
-**Alex Chen** - Business Analyst: [Contributions summary]  
+**Jordan Martinez** - Senior Full Stack Developer: [Contributions summary]  
+**Jamie Park** - Backend Developer: [Contributions summary]  
 **Jordan Martinez** - Developer: [Contributions summary]  
 **Sam Kim** - Designer: [Contributions summary]  
 **Riley Thompson** - QA/Tester: [Contributions summary]

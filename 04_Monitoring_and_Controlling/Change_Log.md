@@ -195,7 +195,8 @@ For this project, the Change Control Board consists of:
 | Role | Name | Authority Level |
 |------|------|-----------------|
 | Chair/PM | Ashley Kissinger | Final decision on all changes |
-| Business Analyst | Alex Chen | Advisory - requirements impact |
+| Project Manager | Ashley Kissinger | Final approval authority |
+| Dev Lead | Jordan Martinez | Technical feasibility assessment |
 | Technical Lead | Jordan Martinez | Advisory - technical feasibility |
 | Designer | Sam Kim | Advisory - UX/design impact |
 | QA Lead | Riley Thompson | Advisory - quality impact |

@@ -3,6 +3,14 @@
         "/^mv \"05_Tasks\" \"03_Project_Execution/Task_Management\" && mv \"06_Risk_Logs\" \"04_Monitoring_and_Controlling/Risk_Management\" && mv \"07_Reports\" \"04_Monitoring_and_Controlling/Status_Reports\"$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^cd \"/Users/ashleykissinger/Project Management Simulation/09_WebApp\" && open index\\.html$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^cd 09_WebApp && python3 -m http\\.server 8000$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }

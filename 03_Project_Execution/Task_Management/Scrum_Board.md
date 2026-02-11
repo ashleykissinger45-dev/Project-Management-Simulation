@@ -123,7 +123,7 @@ Day 11: ░░░░░░░░░░░░░░░░░░░░  0 pts
 | Team Member | Role | Capacity (hrs/day) | Utilization | Current Work Items |
 |-------------|------|-------------------|-------------|-------------------|
 | Ashley Kissinger | PM | 8 hrs | 100% | Sprint planning, stakeholder mgmt |
-| Alex Chen | BA | 8 hrs | 85% | US-006 review, requirements |
+| Jamie Park | Backend Dev | 8 hrs | 85% | API development, database |
 | Jordan Martinez | Developer | 8 hrs | 95% | US-003, US-005 review |
 | Sam Kim | Designer | 8 hrs | 90% | US-004 |
 | Riley Thompson | QA | 8 hrs | 80% | US-005 testing, test cases |

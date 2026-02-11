@@ -102,14 +102,89 @@ Your dashboard will provide a single source of truth with real-time visibility, 
 
 This project follows **PMI/PMBOK standards** with **Agile/Scrum execution**:
 
+**📝 = PM Must Fill Out** | **📄 = Reference/Template**
+
 ```
 SprintLab/
 │
-├── README.md                           # This file
-├── AGILE_GUIDE.md                     # How to use agile ceremonies
+├── README.md                                              # This file
+├── AGILE_GUIDE.md                                         # 📄 How to use agile ceremonies
+├── Scenario.md                                            # 📄 Project business context
+├── 00_PROJECT_MANAGEMENT_GUARDRAILS.md                    # 📄 PM standards and guidelines
 │
-├── 01_Project_Initiation/             # Initiation documents
-│   ├── Business_Case as Project Manager
+├── 01_Project_Initiation/
+│   ├── 📝 Business_Case.md                                # PM deliverable
+│   ├── 📝 Project_Charter.md                              # PM deliverable
+│   ├── Project_Scenario.md                                # 📄 Reference info
+│   └── 📝 Stakeholder_Register.md                         # PM deliverable
+│
+├── 02_Project_Planning/
+│   ├── 📝 Communication_Management_Plan.md                # PM deliverable
+│   └── 📝 Requirements_Documentation.md                   # PM deliverable
+│
+├── 03_Project_Execution/
+│   ├── Task_Management/
+│   │   ├── Definition_of_Done.md                          # 📄 Quality standards
+│   │   ├── 📝 Scrum_Board.md                              # PM updates daily
+│   │   ├── Product_Backlog/
+│   │   │   └── 📝 Product_Backlog.md                      # PM deliverable
+│   │   ├── Sprint_Backlogs/                               # 📝 Create per sprint
+│   │   └── Sprint_Planning/
+│   │       ├── Sprint_Retrospective_Template.md           # 📄 Template
+│   │       └── Sprint_Template.md                         # 📄 Template
+│   └── Team_Management/
+│       └── Team_Directory.md                              # 📄 Team reference info
+│
+├── 04_Monitoring_and_Controlling/
+│   ├── 📝 Change_Log.md                                   # PM tracks changes
+│   ├── 📝 Issue_Log.md                                    # PM tracks issues
+│   ├── Risk_Management/
+│   │   └── 📝 Risk_Log.md                                 # PM deliverable
+│   └── Status_Reports/
+│       └── 📝 Weekly_Reports.md                           # PM deliverable
+│
+├── 05_Project_Closeout/
+│   ├── Lessons_Learned.md                                 # 📝 Fill at project end
+│   └── Project_Closure_Report.md                          # 📝 Fill at project end
+│
+├── 06_Financial_Management/
+│   └── 📝 Budget.md                                       # PM deliverable
+│
+├── 07_Stakeholder_Management/
+│   ├── 📝 Stakeholder_Engagement_Plan.md                  # PM deliverable
+│   └── Communication_Log/
+│       └── 2026-02-07_Session.md                          # 📄 Example log
+│
+├── 08_Quality_Assurance/
+│   └── 📝 Quality_Management_Plan.md                      # PM deliverable
+│
+├── 09_WebApp/                                             # Dashboard application
+│   ├── index.html                                         # Frontend
+│   ├── script.js                                          # Frontend logic
+│   └── style.css                                          # Styling
+│
+├── 10_Meeting_Minutes/
+│   ├── Archive/                                           # 📝 Store completed minutes
+│   └── Templates/
+│       ├── Daily_Standup_Template.md                      # 📄 Template
+│       └── Meeting_Minutes_Template.md                    # 📄 Template
+│
+└── SprintLab_Journal/                                     # Your PM journal
+    ├── Daily_Tracking/                                    # Daily PM activities
+    │   ├── 00_Journal_Overview.md                         # 📄 How to use journal
+    │   ├── 01_Emails.md                                   # 📝 Log emails
+    │   ├── 02_Messages.md                                 # 📝 Log messages
+    │   ├── 03_Meeting_Notes.md                            # 📝 Log meetings
+    │   ├── 04_Decisions_Log.md                            # 📝 Log decisions
+    │   ├── 05_Risks_Log.md                                # 📝 Log risks
+    │   ├── 06_Issues_Log.md                               # 📝 Log issues
+    │   ├── 07_Sprint_Metrics.md                           # 📝 Track metrics
+    │   ├── 08_Retrospectives.md                           # 📝 Sprint retros
+    │   ├── 09_Personal_Notes.md                           # 📝 Your notes
+    │   └── 10_Stakeholder_Tracker.md                      # 📝 Track stakeholders
+    └── Sprint_Logs/
+        └── Sprint_01_Log.md                               # 📝 Daily sprint log
+```
 
 ### Prerequisites
 

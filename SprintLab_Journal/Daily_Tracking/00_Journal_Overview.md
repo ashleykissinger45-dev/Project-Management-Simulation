@@ -124,30 +124,30 @@ Active Directory SSO, RBAC, project visibility rules
 
 ## 📁 Journal Structure
 
-This journal is organized into separate logs for easy navigation:
+This journal is organized into separate logs for easy navigation. All daily tracking files are located in this folder (Daily_Tracking/):
 
-### Communication & Collaboration
+#### Communication & Collaboration
 - **[01_Emails.md](01_Emails.md)** - All emails received and sent
 - **[02_Messages.md](02_Messages.md)** - Slack/Teams instant messages
 - **[03_Meeting_Notes.md](03_Meeting_Notes.md)** - All meeting notes and standups
 
-### Decision & Risk Management
+#### Decision & Risk Management
 - **[04_Decisions_Log.md](04_Decisions_Log.md)** - Every decision with rationale and outcomes
 - **[05_Risks_Log.md](05_Risks_Log.md)** - Risk register and mitigation tracking
 - **[06_Issues_Log.md](06_Issues_Log.md)** - Issues encountered and resolutions
 
-### Performance & Metrics
+#### Performance & Metrics
 - **[07_Sprint_Metrics.md](07_Sprint_Metrics.md)** - Velocity, burndown, team health
 
-### Learning & Reflection
+#### Learning & Reflection
 - **[08_Retrospectives.md](08_Retrospectives.md)** - Sprint retrospective insights
 - **[09_Personal_Notes.md](09_Personal_Notes.md)** - Your personal reflections and observations
 
-### Relationships
+#### Relationships
 - **[10_Stakeholder_Tracker.md](10_Stakeholder_Tracker.md)** - Stakeholder confidence and interactions
 
 ### Sprint Details
-- **[Sprint_Logs/](Sprint_Logs/)** - Detailed daily logs for each sprint
+- **[Sprint_Logs/](../Sprint_Logs/)** - Detailed daily logs for each sprint
 
 ---
 

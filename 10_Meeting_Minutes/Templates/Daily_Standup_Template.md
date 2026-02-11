@@ -24,7 +24,7 @@
 
 ---
 
-### Alex Chen - Business Analyst
+### Jamie Park - Backend Developer
 
 **Yesterday**:
 - [What I accomplished yesterday]
