@@ -6,7 +6,7 @@ An immersive, hands-on Agile project management simulation where you act as the 
 
 ## 🎯 Project Overview
 
-**You are**: Ashley Kissinger, Project Manager at TechFlow Solutions  
+**You are**: A Project Manager at TechFlow Solutions  
 **Your Mission**: Deliver a Smart Task & Risk Dashboard to consolidate project tracking and eliminate fragmented PM tools causing 23% deadline overruns
 
 **Project Details**:
