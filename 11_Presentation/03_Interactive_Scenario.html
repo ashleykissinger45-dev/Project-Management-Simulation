@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SprintLab: Interactive PM Decision Scenario</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1f3a 0%, #2d3561 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            color: #4A90E2;
+        }
+
+        .scenario-box {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 2px solid #4A90E2;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .scenario-title {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #4A90E2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .context-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .context-item {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #4A90E2;
+        }
+
+        .context-label {
+            font-size: 0.9em;
+            color: #a0aec0;
+            margin-bottom: 5px;
+        }
+
+        .context-value {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .crisis-alert {
+            background: linear-gradient(135deg, #E74C3C 0%, #c0392b 100%);
+            padding: 25px;
+            border-radius: 10px;
+            margin: 25px 0;
+            border: 2px solid #ffffff;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(231, 76, 60, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(231, 76, 60, 0.8); }
+        }
+
+        .crisis-alert h2 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .crisis-alert p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .options-container {
+            display: grid;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .option-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 3px solid transparent;
+            border-radius: 12px;
+            padding: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .option-card:hover {
+            border-color: #4A90E2;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.3);
+        }
+
+        .option-card.selected {
+            border-color: #2ecc71;
+            background: rgba(46, 204, 113, 0.2);
+        }
+
+        .option-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .option-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .option-badge {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+
+        .badge-cost { background: #E74C3C; }
+        .badge-time { background: #f39c12; }
+        .badge-scope { background: #9b59b6; }
+
+        .option-description {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .option-actions {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .option-actions ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .option-actions li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .option-actions li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #4A90E2;
+            font-weight: bold;
+        }
+
+        .outcome-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 15px;
+            border: 2px solid #2ecc71;
+            display: none;
+        }
+
+        .outcome-section.active {
+            display: block;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .outcome-title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #2ecc71;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .metric-value.good { color: #2ecc71; }
+        .metric-value.warning { color: #f39c12; }
+        .metric-value.bad { color: #E74C3C; }
+
+        .metric-label {
+            font-size: 0.9em;
+            color: #a0aec0;
+        }
+
+        .consequence-box {
+            background: rgba(231, 76, 60, 0.2);
+            border-left: 5px solid #E74C3C;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .consequence-box.positive {
+            background: rgba(46, 204, 113, 0.2);
+            border-left-color: #2ecc71;
+        }
+
+        .consequence-box.neutral {
+            background: rgba(243, 156, 18, 0.2);
+            border-left-color: #f39c12;
+        }
+
+        .stakeholder-reaction {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .stakeholder-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            background: #4A90E2;
+        }
+
+        .stakeholder-quote {
+            flex: 1;
+            font-style: italic;
+        }
+
+        .ai-insight {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 25px 0;
+            border: 2px solid #ffffff;
+        }
+
+        .ai-insight-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .reset-btn {
+            background: #4A90E2;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .reset-btn:hover {
+            background: #357abd;
+            transform: scale(1.05);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 SprintLab: Interactive Decision Scenario</h1>
+            <p class="subtitle">Experience AI-Powered Project Management Decision Support</p>
+        </div>
+
+        <div id="scenarioView" class="scenario-box">
+            <div class="scenario-title">
+                ⚠️ Crisis Scenario: Week 4, Sprint 2
+            </div>
+
+            <div class="context-grid">
+                <div class="context-item">
+                    <div class="context-label">Current Date</div>
+                    <div class="context-value">March 10, 2026</div>
+                </div>
+                <div class="context-item">
+                    <div class="context-label">Budget Status</div>
+                    <div class="context-value">$32K / $85K used</div>
+                </div>
+                <div class="context-item">
+                    <div class="context-label">Timeline</div>
+                    <div class="context-value">7 weeks remaining</div>
+                </div>
+                <div class="context-item">
+                    <div class="context-label">Team Velocity</div>
+                    <div class="context-value">38 points/sprint</div>
+                </div>
+            </div>
+
+            <div class="crisis-alert">
+                <h2>🔥 CRITICAL ISSUE</h2>
+                <p><strong>Jamie Park (Backend Developer)</strong> has just been pulled to a production emergency for a critical client. They'll be unavailable for <strong>1 full week</strong>.</p>
+                <br>
+                <p><strong>Impact:</strong></p>
+                <ul style="margin-left: 25px; margin-top: 10px; line-height: 1.8;">
+                    <li>13 story points currently in-flight for Sprint 2</li>
+                    <li>Database integration (8 points) depends on Jamie</li>
+                    <li>Jordan Martinez (Sr Dev) is blocked waiting for Jamie's API work</li>
+                    <li>Sprint 2 ends in 5 days</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 20px; font-size: 1.5em;">What do you do? Choose wisely...</h3>
+
+            <div class="options-container">
+                <div class="option-card" onclick="selectOption(1)">
+                    <div class="option-header">
+                        <div class="option-title">Option 1: Cut Scope</div>
+                        <div class="option-badge badge-scope">SCOPE IMPACT</div>
+                    </div>
+                    <div class="option-description">
+                        Move the database integration stories to Sprint 3. Focus on frontend work that doesn't depend on Jamie. Complete what you can with the available team.
+                    </div>
+                    <div class="option-actions">
+                        <strong>Immediate Actions:</strong>
+                        <ul>
+                            <li>Move 8 story points to Sprint 3 backlog</li>
+                            <li>Reassign Jordan to UI components</li>
+                            <li>Notify stakeholders of scope change</li>
+                            <li>Complete Sprint 2 with 5 reduced points</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="option-card" onclick="selectOption(2)">
+                    <div class="option-header">
+                        <div class="option-title">Option 2: Hire Contractor</div>
+                        <div class="option-badge badge-cost">BUDGET IMPACT</div>
+                    </div>
+                    <div class="option-description">
+                        Bring in a senior backend contractor for 1 week to cover Jamie's work. Complete the database integration on schedule. Pay premium rates for emergency hire.
+                    </div>
+                    <div class="option-actions">
+                        <strong>Immediate Actions:</strong>
+                        <ul>
+                            <li>Source and onboard contractor (1-2 days)</li>
+                            <li>Pay $8,000 for 1 week of senior dev work</li>
+                            <li>Jordan coordinates with contractor</li>
+                            <li>Complete Sprint 2 with all 13 points</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="option-card" onclick="selectOption(3)">
+                    <div class="option-header">
+                        <div class="option-title">Option 3: Extend Deadline</div>
+                        <div class="option-badge badge-time">TIMELINE IMPACT</div>
+                    </div>
+                    <div class="option-description">
+                        Request a 1-week extension from Sarah Chen (sponsor). Explain the production emergency. Continue work when Jamie returns. Maintain quality and budget.
+                    </div>
+                    <div class="option-actions">
+                        <strong>Immediate Actions:</strong>
+                        <ul>
+                            <li>Escalate to Sarah Chen immediately</li>
+                            <li>Prepare risk assessment and recovery plan</li>
+                            <li>Notify client that $2M demo may shift</li>
+                            <li>Adjust all sprint schedules by 1 week</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Outcome 1: Cut Scope -->
+        <div id="outcome1" class="outcome-section">
+            <div class="outcome-title">📊 Outcome: Cut Scope</div>
+
+            <div class="ai-insight">
+                <div class="ai-insight-header">🤖 AI Analysis</div>
+                <p>Based on historical project data and stakeholder patterns, here's what likely happens when you cut scope mid-sprint...</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Sprint 2 Completion</div>
+                    <div class="metric-value warning">38%</div>
+                    <div class="metric-label">5 of 13 points done</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Team Morale</div>
+                    <div class="metric-value bad">-35%</div>
+                    <div class="metric-label">Feels like failure</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Budget Impact</div>
+                    <div class="metric-value good">$0</div>
+                    <div class="metric-label">No overrun</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Timeline Impact</div>
+                    <div class="metric-value good">+0 days</div>
+                    <div class="metric-label">Still on track</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">Stakeholder Reactions:</h3>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #E74C3C;">SC</div>
+                <div>
+                    <strong>Sarah Chen (Sponsor)</strong>
+                    <div class="stakeholder-quote">"I understand emergencies happen, but we can't keep making exceptions. The client demo date is non-negotiable. This concerns me about your risk management."</div>
+                </div>
+            </div>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #f39c12;">JM</div>
+                <div>
+                    <strong>Jordan Martinez (Sr Developer)</strong>
+                    <div class="stakeholder-quote">"I feel like we're compromising quality by rushing frontend work. This scope cut creates technical debt we'll pay for later."</div>
+                </div>
+            </div>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #2ecc71;">JP</div>
+                <div>
+                    <strong>Jamie Park (Backend Developer)</strong>
+                    <div class="stakeholder-quote">"I'm back! But now I'm behind on Sprint 3 planning and the team feels demotivated. Did we communicate this to the client?"</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">Consequences Over Time:</h3>
+
+            <div class="consequence-box">
+                <strong>Week 5 (Sprint 3):</strong> Team velocity drops to 30 points as Jordan's rushed frontend work creates bugs. Riley (QA) spends 40% of time on rework instead of new features.
+            </div>
+
+            <div class="consequence-box neutral">
+                <strong>Week 7 (Sprint 4):</strong> You catch up on deferred database work, but Sprint 4 velocity is only 25 points due to technical debt. Budget still safe, but morale declining.
+            </div>
+
+            <div class="consequence-box">
+                <strong>Week 10 (Sprint 5):</strong> Sarah Chen escalates to executive team due to repeated "scope adjustments." Client confidence wanes. You're now in crisis mode with 2 weeks left.
+            </div>
+
+            <div class="ai-insight" style="margin-top: 30px;">
+                <div class="ai-insight-header">💡 AI Recommendation</div>
+                <p><strong>Risk Level: MEDIUM-HIGH</strong></p>
+                <p>Cutting scope preserves budget and timeline in the short term, but creates compounding problems:</p>
+                <ul style="margin-left: 25px; margin-top: 15px; line-height: 1.8;">
+                    <li>Technical debt from rushed work reduces future velocity by 20-25%</li>
+                    <li>Team morale impacts productivity for 2-3 sprints</li>
+                    <li>Stakeholder confidence decreases, leading to micromanagement</li>
+                    <li>You'll spend 8-10 hours in damage control meetings</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Better Alternative:</strong> Consider Option 2 (Contractor) if budget allows, or Option 3 if client relationship is strong.</p>
+            </div>
+
+            <button class="reset-btn" onclick="resetScenario()">🔄 Try a Different Approach</button>
+        </div>
+
+        <!-- Outcome 2: Hire Contractor -->
+        <div id="outcome2" class="outcome-section">
+            <div class="outcome-title">📊 Outcome: Hire Contractor</div>
+
+            <div class="ai-insight">
+                <div class="ai-insight-header">🤖 AI Analysis</div>
+                <p>Based on budget reserves and contractor market data, here's what happens when you bring in emergency help...</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Sprint 2 Completion</div>
+                    <div class="metric-value good">92%</div>
+                    <div class="metric-label">12 of 13 points done</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Team Morale</div>
+                    <div class="metric-value good">+10%</div>
+                    <div class="metric-label">Feels supported</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Budget Impact</div>
+                    <div class="metric-value warning">-$8,000</div>
+                    <div class="metric-label">$40K / $85K used</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Timeline Impact</div>
+                    <div class="metric-value good">+0 days</div>
+                    <div class="metric-label">On schedule</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">Stakeholder Reactions:</h3>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #2ecc71;">SC</div>
+                <div>
+                    <strong>Sarah Chen (Sponsor)</strong>
+                    <div class="stakeholder-quote">"Smart call. You used the contingency budget exactly as intended. I appreciate you keeping us on track without compromising quality."</div>
+                </div>
+            </div>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #2ecc71;">JM</div>
+                <div>
+                    <strong>Jordan Martinez (Sr Developer)</strong>
+                    <div class="stakeholder-quote">"The contractor knew their stuff. We paired well, and I learned a new pattern for API integration. Minimal disruption to our sprint."</div>
+                </div>
+            </div>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #f39c12;">JP</div>
+                <div>
+                    <strong>Jamie Park (Backend Developer)</strong>
+                    <div class="stakeholder-quote">"I'm back! Looks like things kept moving. I'll need a day to review the contractor's code, but it's solid work. Thanks for having my back."</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">Consequences Over Time:</h3>
+
+            <div class="consequence-box positive">
+                <strong>Week 5 (Sprint 3):</strong> Team velocity stays strong at 38 points. Jamie smoothly picks up where contractor left off. Minimal knowledge transfer needed due to good documentation.
+            </div>
+
+            <div class="consequence-box neutral">
+                <strong>Week 7 (Sprint 4):</strong> You're now 47% through budget ($40K / $85K) but ahead of schedule. Sarah Chen approves additional $3K for integration testing, citing your "responsible budget management."
+            </div>
+
+            <div class="consequence-box positive">
+                <strong>Week 10 (Sprint 5):</strong> Project is on track for May 1 deadline. Team morale is high. One hiccup: contractor's code has minor bug that takes Jamie 4 hours to fix. Overall, still a win.
+            </div>
+
+            <div class="ai-insight" style="margin-top: 30px;">
+                <div class="ai-insight-header">💡 AI Recommendation</div>
+                <p><strong>Risk Level: LOW-MEDIUM</strong></p>
+                <p>Hiring a contractor is a solid decision with manageable trade-offs:</p>
+                <ul style="margin-left: 25px; margin-top: 15px; line-height: 1.8;">
+                    <li>✅ Sprint 2 completes with 92% success rate</li>
+                    <li>✅ Team morale boost from feeling supported</li>
+                    <li>✅ Timeline stays on track - no domino effect</li>
+                    <li>⚠️ Budget contingency reduced by 16% ($8K spent)</li>
+                    <li>⚠️ 1-2 days lost to contractor onboarding and code review</li>
+                    <li>⚠️ Minor technical debt from non-team code</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Net Result:</strong> You traded budget flexibility for schedule certainty. This is typically the right call when stakeholder deadlines are immovable.</p>
+            </div>
+
+            <button class="reset-btn" onclick="resetScenario()">🔄 Try a Different Approach</button>
+        </div>
+
+        <!-- Outcome 3: Extend Deadline -->
+        <div id="outcome3" class="outcome-section">
+            <div class="outcome-title">📊 Outcome: Extend Deadline</div>
+
+            <div class="ai-insight">
+                <div class="ai-insight-header">🤖 AI Analysis</div>
+                <p>Based on stakeholder power/interest analysis and organizational culture, here's what happens when you request a timeline extension...</p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Sprint 2 Completion</div>
+                    <div class="metric-value good">100%</div>
+                    <div class="metric-label">All 13 points done</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Team Morale</div>
+                    <div class="metric-value good">+5%</div>
+                    <div class="metric-label">Relieved, less stressed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Budget Impact</div>
+                    <div class="metric-value good">$0</div>
+                    <div class="metric-label">No overrun</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Timeline Impact</div>
+                    <div class="metric-value bad">+7 days</div>
+                    <div class="metric-label">May 8 new deadline</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">Stakeholder Reactions:</h3>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #E74C3C;">SC</div>
+                <div>
+                    <strong>Sarah Chen (Sponsor)</strong>
+                    <div class="stakeholder-quote">"I need to escalate this to the exec team. The $2M client demo is locked for May 1 - we have venue, attendees, marketing. This puts us in a very difficult position."</div>
+                </div>
+            </div>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #E74C3C;">MG</div>
+                <div>
+                    <strong>Michael Green (Client Executive)</strong>
+                    <div class="stakeholder-quote">"We specifically chose TechFlow because you promised May 1. Our board meeting is May 2. Are you telling me we won't have a working product to present?"</div>
+                </div>
+            </div>
+
+            <div class="stakeholder-reaction">
+                <div class="stakeholder-avatar" style="background: #2ecc71;">JP</div>
+                <div>
+                    <strong>Jamie Park (Backend Developer)</strong>
+                    <div class="stakeholder-quote">"Thanks for not rushing the team. I'm back now and we can finish this properly. Though the tension with leadership is making everyone nervous..."</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; margin-bottom: 15px;">Consequences Over Time:</h3>
+
+            <div class="consequence-box">
+                <strong>Week 5 (Sprint 3):</strong> Sarah Chen assigns a senior PMO director to "shadow" your project. You now have weekly oversight meetings that consume 3 hours/week. Team feels micromanaged.
+            </div>
+
+            <div class="consequence-box">
+                <strong>Week 7 (Sprint 4):</strong> Client pushes back on timeline extension. Compromise reached: Deliver MVP by May 1, full features by May 8. You're now managing two deadlines and increased scope pressure.
+            </div>
+
+            <div class="consequence-box">
+                <strong>Week 11 (Sprint 6):</strong> Team delivers on May 1 MVP, but quality is rushed. Client demo goes OK but not great. Your reputation as a PM takes a hit. Sarah rates project "Yellow" in portfolio review.
+            </div>
+
+            <div class="ai-insight" style="margin-top: 30px;">
+                <div class="ai-insight-header">💡 AI Recommendation</div>
+                <p><strong>Risk Level: HIGH</strong></p>
+                <p>Extending the deadline triggers significant organizational and political consequences:</p>
+                <ul style="margin-left: 25px; margin-top: 15px; line-height: 1.8;">
+                    <li>❌ Stakeholder confidence drops significantly (power/interest analysis shows Sarah has HIGH power)</li>
+                    <li>❌ Client relationship strain - May 1 is a hard constraint tied to their board meeting</li>
+                    <li>❌ Increased oversight and micromanagement reduces team autonomy</li>
+                    <li>❌ You spend 10-12 hours in escalation meetings and damage control</li>
+                    <li>⚠️ Team morale temporarily up, but sustained stress from added scrutiny</li>
+                    <li>✅ Budget and quality preserved, but at high political cost</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Critical Insight:</strong> Your stakeholder register shows Sarah Chen has VERY LOW tolerance for timeline changes. This was a predictable outcome based on AI analysis of her past project patterns.</p>
+                <p style="margin-top: 10px;"><strong>Better Alternative:</strong> Option 2 (Contractor) uses contingency budget for its intended purpose without political fallout.</p>
+            </div>
+
+            <button class="reset-btn" onclick="resetScenario()">🔄 Try a Different Approach</button>
+        </div>
+    </div>
+
+    <script>
+        function selectOption(optionNumber) {
+            // Hide scenario view
+            document.getElementById('scenarioView').style.display = 'none';
+            
+            // Show selected outcome
+            document.getElementById('outcome' + optionNumber).classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function resetScenario() {
+            // Hide all outcomes
+            document.getElementById('outcome1').classList.remove('active');
+            document.getElementById('outcome2').classList.remove('active');
+            document.getElementById('outcome3').classList.remove('active');
+            
+            // Show scenario view
+            document.getElementById('scenarioView').style.display = 'block';
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -170,6 +170,14 @@ SprintLab/
 │       ├── Daily_Standup_Template.md                      # 📄 Template
 │       └── Meeting_Minutes_Template.md                    # 📄 Template
 │
+├── 11_Presentation/                                       # 🎤 PM Club presentation materials
+│   ├── 00_Presentation_Guide.md                           # 📄 Complete presentation guide
+│   ├── 01_Demo_Script_5min.md                             # 📄 5-minute live demo script
+│   ├── 02_Visual_Slides_Content.md                        # 📄 Slide deck content
+│   ├── 03_Interactive_Scenario.html                       # 🎮 Audience decision scenario
+│   ├── 04_Real_SprintLab_Examples.md                      # 📄 Real AI value examples
+│   └── 05_Wow_Moment_Plan.md                              # 📄 Showstopper demonstrations
+│
 └── SprintLab_Journal/                                     # Your PM journal
     ├── Daily_Tracking/                                    # Daily PM activities
     │   ├── 00_Journal_Overview.md                         # 📄 How to use journal
