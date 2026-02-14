@@ -154,8 +154,8 @@ This journal is organized into separate logs for easy navigation. All daily trac
 ## 🎓 Pre-Simulation Checklist
 
 **Weekend Preparation (Optional but Recommended):**
-- [ ] Read 2_Scenario.md - Business problem context
-- [ ] Review 3_Project_Charter.md - Scope, budget, timeline
+- [ ] Read 02_Scenario.md - Business problem context
+- [ ] Review 01_Project_Initiation/Project_Charter.md - Scope, budget, timeline
 - [ ] Study Product_Backlog.md - All 43 user stories
 - [ ] Review Stakeholder_Register.md - Know the 14 stakeholders
 - [ ] Read AGILE_GUIDE.md - How to run Scrum ceremonies

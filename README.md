@@ -289,8 +289,8 @@ Your dashboard will provide a single source of truth with real-time visibility, 
 Project Management Simulation/
 │
 ├── 📄 README.md (This file)
-├── 📄 Scenario.md (Business context)
-├── 📄 AGILE_GUIDE.md (Agile methodology guide)
+├── 📄 02_Scenario.md (Business context)
+├── 📄 01_AGILE_GUIDE.md (Agile methodology guide)
 │
 ├── 01_Project_Initiation/
 │   ├── ✅ Project_Charter.md
@@ -359,8 +359,8 @@ Legend: ✅ Complete | 🔄 In Progress | ⏳ Upcoming
 | **Planning** | [Communication Management Plan](02_Project_Planning/Communication_Management_Plan.md) | Stakeholder communication strategy and escalation | ✅ Approved & Signed |
 | **Execution** | [Product Backlog](03_Project_Execution/Task_Management/Product_Backlog/Product_Backlog.md) | 43 user stories across 7 epics, prioritized backlog | 🔄 In Progress |
 | **Execution** | [Team Directory](03_Project_Execution/Team_Management/Team_Directory.md) | Team roles, responsibilities, contact info | ✅ Complete |
-| **Reference** | [Scenario.md](Scenario.md) | Business problem context and stakeholders | 📄 Reference |
-| **Reference** | [AGILE_GUIDE.md](AGILE_GUIDE.md) | How to run Agile ceremonies for this project | 📄 Reference |
+| **Reference** | [02_Scenario.md](02_Scenario.md) | Business problem context and stakeholders | 📄 Reference |
+| **Reference** | [01_AGILE_GUIDE.md](01_AGILE_GUIDE.md) | How to run Agile ceremonies for this project | 📄 Reference |
 
 ---
 
@@ -407,11 +407,11 @@ Legend: ✅ Complete | 🔄 In Progress | ⏳ Upcoming
 2. **Read your project assignment**
    ```bash
    # Start with these documents in order:
-   # 1. 2_Scenario.md - Understand the business problem
-   # 2. 3_Project_Charter.md - Review scope, budget, timeline
+   # 1. 02_Scenario.md - Understand the business problem
+   # 2. 01_Project_Initiation/Project_Charter.md - Review scope, budget, timeline
    # 3. 01_Project_Initiation/Stakeholder_Register.md - Know your stakeholders
    # 4. 03_Project_Execution/Task_Management/Product_Backlog.md - See all 43 user stories
-   # 5. AGILE_GUIDE.md - Learn how to run agile ceremonies
+   # 5. 01_AGILE_GUIDE.md - Learn how to run agile ceremonies
    ```
 
 3. **Prepare for Sprint 1 kickoff (February 10, 2026)**
@@ -422,11 +422,11 @@ Legend: ✅ Complete | 🔄 In Progress | ⏳ Upcoming
 Key Project Documents
 
 ### Must-Read Documents
-1. **[Project Scenario](2_Scenario.md)** - Complete business context and problem statement
-2. **[Project Charter](3_Project_Charter.md)** - Official project authorization with scope, budget, timeline
+1. **[Project Scenario](02_Scenario.md)** - Complete business context and problem statement
+2. **[Project Charter](01_Project_Initiation/Project_Charter.md)** - Official project authorization with scope, budget, timeline
 3. **[Product Backlog](03_Project_Execution/Task_Management/Product_Backlog/Product_Backlog.md)** - 43 user stories you need to deliver
 4. **[Stakeholder Register](01_Project_Initiation/Stakeholder_Register.md)** - 14 stakeholders with power/interest analysis
-5. **[AGILE_GUIDE.md](AGILE_GUIDE.md)** - Complete guide to running agile ceremonies in this project
+5. **[01_AGILE_GUIDE.md](01_AGILE_GUIDE.md)** - Complete guide to running agile ceremonies in this project
 
 ### Working Documents You'll Fill Out
 - **Sprint Backlogs**: Create one per sprint from template
@@ -623,9 +623,9 @@ This is an **intermediate-to-advanced** simulation:
 ## 🔗 Important Links
 
 - **Repository**: [SprintLab-The-Agile-Project-Management-Experience](https://github.com/ashleykissinger45-dev/SprintLab-The-Agile-Project-Management-Experience)
-- **Project Charter**: [3_Project_Charter.md](3_Project_Charter.md)
+- **Project Charter**: [Project_Charter.md](01_Project_Initiation/Project_Charter.md)
 - **Product Backlog**: [Product_Backlog.md](03_Project_Execution/Task_Management/Product_Backlog/Product_Backlog.md)
-- **Agile Guide**: [AGILE_GUIDE.md](AGILE_GUIDE.md)
+- **Agile Guide**: [01_AGILE_GUIDE.md](01_AGILE_GUIDE.md)
 - **Scrum Board**: [Scrum_Board.md](03_Project_Execution/Task_Management/Scrum_Board.md)
 
 ## ⚠️ Important Notes
