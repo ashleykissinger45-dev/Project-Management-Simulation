@@ -11,6 +11,14 @@
         "/^cd 09_WebApp && python3 -m http\\.server 8000$/": {
             "approve": true,
             "matchCommandLine": true
+        },
+        "/^git rm --cached \\.DS_Store$/": {
+            "approve": true,
+            "matchCommandLine": true
+        },
+        "/^git add \\.gitignore && git commit -m \"Add \\.gitignore and remove \\.DS_Store from repository\" && git push$/": {
+            "approve": true,
+            "matchCommandLine": true
         }
     }
 }
